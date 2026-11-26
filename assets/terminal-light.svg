@@ -26,11 +26,7 @@
   <text x="824" y="23" text-anchor="end" fill="#8C959F" font-size="10.5">UTF-8 · SYNCED 2026-11-26</text>
 
   <!-- Section 1: Neofetch hero -->
-  <text x="32" y="64" font-size="12">
-    <tspan fill="#0969DA" font-weight="600">❯ </tspan>
-    <tspan fill="#1F2328" font-weight="600">neofetch</tspan>
-    <tspan fill="#8C959F"> --profile</tspan>
-  </text>
+  <text x="32" y="64" font-size="12"><tspan fill="#0969DA" font-weight="600">❯ </tspan><tspan fill="#1F2328" font-weight="600">neofetch</tspan><tspan fill="#8C959F"> --profile</tspan></text>
   <text x="32" y="92.0" font-size="11.5" xml:space="preserve"><tspan fill="#AFB8C1">   ·        </tspan><tspan fill="#0550AE">*</tspan><tspan fill="#AFB8C1">             ·       </tspan></text>
   <text x="32" y="107.5" font-size="11.5" xml:space="preserve"><tspan fill="#AFB8C1">        .        </tspan><tspan fill="#0550AE">/\</tspan><tspan fill="#AFB8C1">        .      </tspan></text>
   <text x="32" y="123.0" font-size="11.5" xml:space="preserve"><tspan fill="#AFB8C1">                </tspan><tspan fill="#0550AE">/</tspan><tspan fill="#1F2328">^^</tspan><tspan fill="#0969DA">\</tspan><tspan fill="#AFB8C1">              </tspan></text>
@@ -44,11 +40,7 @@
   <text x="32" y="247.0" font-size="11.5" xml:space="preserve"><tspan fill="#AFB8C1"> </tspan><tspan fill="#6E7781">/</tspan><tspan fill="#0969DA">───────────────────────────────</tspan><tspan fill="#6E7781">\</tspan></text>
   <text x="32" y="262.5" font-size="11.5" xml:space="preserve"><tspan fill="#AFB8C1">  </tspan><tspan fill="#AFB8C1">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </tspan><tspan fill="#AFB8C1"></tspan></text>
   <text x="32" y="278.0" font-size="11.5" xml:space="preserve"><tspan fill="#AFB8C1">   </tspan><tspan fill="#0969DA">01</tspan><tspan fill="#AFB8C1"> · </tspan><tspan fill="#6E7781">ALT 4,820m</tspan><tspan fill="#AFB8C1"> · </tspan><tspan fill="#0969DA">CLEAR NIGHT</tspan></text>
-  <text x="324" y="90" font-size="15" font-weight="700">
-    <tspan fill="#0969DA">royhang</tspan>
-    <tspan fill="#8C959F" font-weight="400">@</tspan>
-    <tspan fill="#1F2328">github</tspan>
-  </text>
+  <text x="324" y="90" font-size="15" font-weight="700"><tspan fill="#0969DA">royhang</tspan><tspan fill="#8C959F" font-weight="400">@</tspan><tspan fill="#1F2328">github</tspan></text>
   <line x1="324" y1="100" x2="824" y2="100" stroke="#E5E9F0" stroke-width="1" />
   <line x1="324" y1="100" x2="432" y2="100" stroke="#0969DA" stroke-width="1.5" />
   <text x="324" y="119" fill="#57606A" font-size="11.5">Building AI agents &amp; local-first developer tools.</text>
@@ -66,13 +58,13 @@
   <text x="414" y="195.5" fill="#1F2328" font-size="11.5">Shanghai, CN</text>
   <text x="324" y="213.0" fill="#0969DA" font-size="11.5" font-weight="600">Links</text>
   <text x="398" y="213.0" fill="#8C959F" font-size="11.5">:</text>
-  <text x="414" y="213.0" fill="#1F2328" font-size="11.5">github.com/royhang</text>
+  <text x="414" y="213.0" fill="#1F2328" font-size="11.5">royhang.github.io/PaperBridge</text>
   <rect x="324" y="234" width="500" height="52" rx="7" fill="#F6F8FA" stroke="#D8DEE4" stroke-width="1" />
   <text x="340" y="252" fill="#8C959F" font-size="9.5" letter-spacing="0.6">COMMITS (1Y)</text>
-  <text x="340" y="274" fill="#1F2328" font-size="14.5" font-weight="700">16</text>
+  <text x="340" y="274" fill="#1F2328" font-size="14.5" font-weight="700">17</text>
   <line x1="449" y1="244" x2="449" y2="276" stroke="#E5E9F0" stroke-width="1" />
   <text x="465" y="252" fill="#8C959F" font-size="9.5" letter-spacing="0.6">STARS</text>
-  <text x="465" y="274" fill="#1F2328" font-size="14.5" font-weight="700">1</text>
+  <text x="465" y="274" fill="#1F2328" font-size="14.5" font-weight="700">2</text>
   <line x1="574" y1="244" x2="574" y2="276" stroke="#E5E9F0" stroke-width="1" />
   <text x="590" y="252" fill="#8C959F" font-size="9.5" letter-spacing="0.6">REPOS</text>
   <text x="590" y="274" fill="#1F2328" font-size="14.5" font-weight="700">3</text>
@@ -82,17 +74,13 @@
   <line x1="32" y1="304" x2="824" y2="304" stroke="#E5E9F0" stroke-width="1" />
 
   <!-- Section 2: Featured repositories -->
-  <text x="32" y="325" font-size="12">
-    <tspan fill="#0969DA" font-weight="600">❯ </tspan>
-    <tspan fill="#1F2328" font-weight="600">gh</tspan>
-    <tspan fill="#8C959F"> repo list --source --limit 2</tspan>
-  </text>
+  <text x="32" y="325" font-size="12"><tspan fill="#0969DA" font-weight="600">❯ </tspan><tspan fill="#1F2328" font-weight="600">gh</tspan><tspan fill="#8C959F"> repo list --source --limit 2</tspan></text>
   <text x="824" y="325" text-anchor="end" fill="#8C959F" font-size="10" letter-spacing="0.6">PUBLIC · FEATURED</text>
   <rect x="32" y="338" width="390" height="84" rx="7" fill="#F6F8FA" stroke="#D8DEE4" stroke-width="1" />
   <text x="46" y="360" fill="#0969DA" font-size="12" font-weight="600">PaperBridge</text>
-  <text x="408" y="360" text-anchor="end" fill="#57606A" font-size="11">★ 1</text>
-  <text x="46" y="379" fill="#57606A" font-size="10.5">PaperBridge · 开源、本地优先的学术论文阅读与保版式双</text>
-  <text x="46" y="394" fill="#57606A" font-size="10.5">语翻译工具（Web + Desktop）</text>
+  <text x="408" y="360" text-anchor="end" fill="#57606A" font-size="11">★ 2</text>
+  <text x="46" y="379" fill="#57606A" font-size="10.5">开源、本地优先的学术论文阅读与保版式双语翻译工具</text>
+  <text x="46" y="394" fill="#57606A" font-size="10.5">(Web + Desktop) · AI 问答与三栏文献库</text>
   <circle cx="50" cy="408" r="3.5" fill="#0969DA" />
   <text x="59" y="411.5" fill="#8C959F" font-size="10.5">TypeScript</text>
   <text x="408" y="411.5" text-anchor="end" fill="#8C959F" font-size="10.5">⑂ 0</text>
@@ -100,19 +88,15 @@
   <text x="448" y="360" fill="#0969DA" font-size="12" font-weight="600">codeops-agent</text>
   <text x="810" y="360" text-anchor="end" fill="#57606A" font-size="11">★ 0</text>
   <text x="448" y="379" fill="#57606A" font-size="10.5">Multi-Agent Codebase &amp; Log Troubleshooting Assistant</text>
-  <text x="448" y="394" fill="#57606A" font-size="10.5">with MCP Tools, Hybrid RAG, Context Engineering, an…</text>
+  <text x="448" y="394" fill="#57606A" font-size="10.5">with MCP, Hybrid RAG, Context Engineering &amp; Eval</text>
   <circle cx="452" cy="408" r="3.5" fill="#0969DA" />
   <text x="461" y="411.5" fill="#8C959F" font-size="10.5">Python</text>
   <text x="810" y="411.5" text-anchor="end" fill="#8C959F" font-size="10.5">⑂ 1</text>
   <line x1="32" y1="438" x2="824" y2="438" stroke="#E5E9F0" stroke-width="1" />
 
   <!-- Section 3: Contribution matrix -->
-  <text x="32" y="458" font-size="12">
-    <tspan fill="#0969DA" font-weight="600">❯ </tspan>
-    <tspan fill="#1F2328" font-weight="600">git</tspan>
-    <tspan fill="#8C959F"> log --graph --since="1 year"</tspan>
-  </text>
-  <text x="698" y="458" text-anchor="end" fill="#57606A" font-size="10.5">21 contributions in the last year</text>
+  <text x="32" y="458" font-size="12"><tspan fill="#0969DA" font-weight="600">❯ </tspan><tspan fill="#1F2328" font-weight="600">git</tspan><tspan fill="#8C959F"> log --graph --since="1 year"</tspan></text>
+  <text x="698" y="458" text-anchor="end" fill="#57606A" font-size="10.5">22 contributions in the last year</text>
   <text x="734" y="458" text-anchor="end" fill="#8C959F" font-size="9.5">Less</text>
   <rect x="740" y="450" width="8" height="8" rx="2" fill="#EBEDF0" />
   <rect x="751" y="450" width="8" height="8" rx="2" fill="#CBE4FF" />
@@ -445,7 +429,7 @@
   <rect x="722" y="472" width="11" height="11" rx="2.5" fill="#EBEDF0" />
   <rect x="722" y="487" width="11" height="11" rx="2.5" fill="#EBEDF0" />
   <rect x="722" y="502" width="11" height="11" rx="2.5" fill="#EBEDF0" />
-  <rect x="722" y="517" width="11" height="11" rx="2.5" fill="#80BEFF" />
+  <rect x="722" y="517" width="11" height="11" rx="2.5" fill="#EBEDF0" />
   <rect x="722" y="532" width="11" height="11" rx="2.5" fill="#0969DA" />
   <rect x="722" y="547" width="11" height="11" rx="2.5" fill="#EBEDF0" />
   <rect x="722" y="562" width="11" height="11" rx="2.5" fill="#EBEDF0" />
@@ -488,7 +472,7 @@
   <rect x="812" y="487" width="11" height="11" rx="2.5" fill="#EBEDF0" />
   <rect x="812" y="502" width="11" height="11" rx="2.5" fill="#EBEDF0" />
   <rect x="812" y="517" width="11" height="11" rx="2.5" fill="#0969DA" />
-  <rect x="812" y="532" width="11" height="11" rx="2.5" fill="#EBEDF0" />
+  <rect x="812" y="532" width="11" height="11" rx="2.5" fill="#80BEFF" />
   <rect x="812" y="547" width="11" height="11" rx="2.5" fill="#EBEDF0" />
   <rect x="812" y="562" width="11" height="11" rx="2.5" fill="#EBEDF0" />
 

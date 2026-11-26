@@ -192,22 +192,44 @@ def display_width(text: str) -> int:
 
 
 def truncate_width(text: str, max_cols: int) -> str:
-    """Truncate text cleanly with ellipsis so its display width <= max_cols."""
+    """Truncate text cleanly with ellipsis so its display width <= max_cols.
+
+    For space-separated text, prefers breaking on a word boundary when doing so
+    retains most of the available line width, avoiding awkward mid-word cuts.
+    """
     clean = " ".join((text or "").split())
     if display_width(clean) <= max_cols:
         return clean
     if max_cols <= 1:
         return "…"[:max_cols]
+
+    limit = max_cols - 1
+    words = clean.split(" ")
+    if len(words) > 1:
+        kept: List[str] = []
+        cols = 0
+        for word in words:
+            w = display_width(word)
+            needed = w if not kept else cols + 1 + w
+            if needed <= limit:
+                kept.append(word)
+                cols = needed
+            else:
+                break
+        if kept and cols >= limit * 0.6:
+            trimmed = " ".join(kept).rstrip(" ,;:-·/")
+            if trimmed:
+                return trimmed + "…"
+
     out: List[str] = []
     cols = 0
-    limit = max_cols - 1
     for ch in clean:
         w = char_width(ch)
         if cols + w > limit:
             break
         out.append(ch)
         cols += w
-    return "".join(out).rstrip() + "…"
+    return "".join(out).rstrip(" ,;:-·/") + "…"
 
 
 def wrap_two_lines(text: str, max_cols: int) -> Tuple[str, str]:
@@ -526,11 +548,11 @@ def render_svg(config: Dict[str, Any], data: Dict[str, Any], mode: str) -> str:
         ),
         "",
         "  <!-- Section 1: Neofetch hero -->",
-        '  <text x="32" y="64" font-size="12">',
-        '    <tspan fill="{acc}" font-weight="600">❯ </tspan>'.format(acc=t["accent"]),
-        '    <tspan fill="{pri}" font-weight="600">neofetch</tspan>'.format(pri=t["text_primary"]),
-        '    <tspan fill="{dim}"> --profile</tspan>'.format(dim=t["text_dim"]),
-        "  </text>",
+        '  <text x="32" y="64" font-size="12">'
+        '<tspan fill="{acc}" font-weight="600">❯ </tspan>'
+        '<tspan fill="{pri}" font-weight="600">neofetch</tspan>'
+        '<tspan fill="{dim}"> --profile</tspan>'
+        "</text>".format(acc=t["accent"], pri=t["text_primary"], dim=t["text_dim"]),
     ]
 
     lines.extend(render_ascii_lines(config, t, x=32, y_start=92.0))
@@ -538,11 +560,16 @@ def render_svg(config: Dict[str, Any], data: Dict[str, Any], mode: str) -> str:
     # Right column identity header
     lines.extend(
         [
-            '  <text x="324" y="90" font-size="15" font-weight="700">',
-            '    <tspan fill="{acc}">{name}</tspan>'.format(acc=t["accent"], name=escape(display_name)),
-            '    <tspan fill="{dim}" font-weight="400">@</tspan>'.format(dim=t["text_dim"]),
-            '    <tspan fill="{pri}">github</tspan>'.format(pri=t["text_primary"]),
-            "  </text>",
+            '  <text x="324" y="90" font-size="15" font-weight="700">'
+            '<tspan fill="{acc}">{name}</tspan>'
+            '<tspan fill="{dim}" font-weight="400">@</tspan>'
+            '<tspan fill="{pri}">github</tspan>'
+            "</text>".format(
+                acc=t["accent"],
+                name=escape(display_name),
+                dim=t["text_dim"],
+                pri=t["text_primary"],
+            ),
             '  <line x1="324" y1="100" x2="824" y2="100" stroke="{div}" stroke-width="1" />'.format(
                 div=t["divider"]
             ),
@@ -629,11 +656,11 @@ def render_svg(config: Dict[str, Any], data: Dict[str, Any], mode: str) -> str:
         [
             "",
             "  <!-- Section 2: Featured repositories -->",
-            '  <text x="32" y="325" font-size="12">',
-            '    <tspan fill="{acc}" font-weight="600">❯ </tspan>'.format(acc=t["accent"]),
-            '    <tspan fill="{pri}" font-weight="600">gh</tspan>'.format(pri=t["text_primary"]),
-            '    <tspan fill="{dim}">{cmd}</tspan>'.format(dim=t["text_dim"], cmd=escape(repo_cmd)),
-            "  </text>",
+            '  <text x="32" y="325" font-size="12">'
+            '<tspan fill="{acc}" font-weight="600">❯ </tspan>'
+            '<tspan fill="{pri}" font-weight="600">gh</tspan>'
+            '<tspan fill="{dim}">{cmd}</tspan>'
+            "</text>".format(acc=t["accent"], pri=t["text_primary"], dim=t["text_dim"], cmd=escape(repo_cmd)),
             '  <text x="824" y="325" text-anchor="end" fill="{dim}" font-size="10" letter-spacing="0.6">{badge}</text>'.format(
                 dim=t["text_dim"], badge=escape(repo_badge)
             ),
@@ -718,11 +745,11 @@ def render_svg(config: Dict[str, Any], data: Dict[str, Any], mode: str) -> str:
         [
             "",
             "  <!-- Section 3: Contribution matrix -->",
-            '  <text x="32" y="458" font-size="12">',
-            '    <tspan fill="{acc}" font-weight="600">❯ </tspan>'.format(acc=t["accent"]),
-            '    <tspan fill="{pri}" font-weight="600">git</tspan>'.format(pri=t["text_primary"]),
-            '    <tspan fill="{dim}"> log --graph --since="1 year"</tspan>'.format(dim=t["text_dim"]),
-            "  </text>",
+            '  <text x="32" y="458" font-size="12">'
+            '<tspan fill="{acc}" font-weight="600">❯ </tspan>'
+            '<tspan fill="{pri}" font-weight="600">git</tspan>'
+            '<tspan fill="{dim}"> log --graph --since="1 year"</tspan>'
+            "</text>".format(acc=t["accent"], pri=t["text_primary"], dim=t["text_dim"]),
             '  <text x="698" y="458" text-anchor="end" fill="{sec}" font-size="10.5">{cnt} contributions in the last year</text>'.format(
                 sec=t["text_secondary"], cnt=escape(total_contribs)
             ),
