@@ -2,8 +2,11 @@ name: Update Terminal Profile
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # Run every 30 minutes off the top-of-the-hour rush to keep stats fresh
+    - cron: "17,47 * * * *"
   workflow_dispatch:
+  repository_dispatch:
+    types: [sync-profile]
   push:
     branches:
       - main
@@ -12,6 +15,10 @@ on:
       - "profile.config.json"
       - "scripts/generate.py"
       - ".github/workflows/update-profile.yml"
+
+concurrency:
+  group: update-profile
+  cancel-in-progress: false
 
 permissions:
   contents: write
