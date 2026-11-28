@@ -23,7 +23,7 @@
   <circle cx="38" cy="19" r="5" fill="#30363D" />
   <circle cx="54" cy="19" r="5" fill="#30363D" />
   <text x="428" y="23" text-anchor="middle" fill="#8B949E" font-size="11.5" font-weight="500">royhang@github — zsh — 108×34</text>
-  <text x="824" y="23" text-anchor="end" fill="#6E7681" font-size="10.5">UTF-8 · SYNCED 2026-11-27</text>
+  <text x="824" y="23" text-anchor="end" fill="#6E7681" font-size="10.5">UTF-8 · SYNCED 2026-11-28</text>
 
   <!-- Section 1: Neofetch hero -->
   <text x="32" y="64" font-size="12"><tspan fill="#79C0FF" font-weight="600">❯ </tspan><tspan fill="#E6EDF3" font-weight="600">neofetch</tspan><tspan fill="#6E7681"> --profile</tspan></text>
